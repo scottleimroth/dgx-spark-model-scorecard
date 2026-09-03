@@ -14,8 +14,14 @@ By Scott Leimroth · [@ScottLeimroth](https://x.com/ScottLeimroth)
 > from column to column by design.
 >
 > Every cell shows a 0-10 standing *within its row only*, the raw measurement,
-> and the exact configuration behind it. There are no column totals, because
-> adding a speed score to an OCR score produces a number that means nothing.
+> and the exact configuration behind it. There is no fixed overall score, because
+> adding a speed standing to an OCR standing produces a number that means nothing.
+>
+> Instead, **you declare what you care about.** On the
+> [interactive board](https://scottleimroth.com/ai-technology/spark-benchmarks)
+> you rank the dimensions that matter for your workload, and the models re-sort
+> by a weighted blend of *your* priorities. A "best model" only exists relative
+> to a job, so the board makes you name the job first.
 
 ## What's here
 

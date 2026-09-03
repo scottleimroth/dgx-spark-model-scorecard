@@ -24,9 +24,17 @@ Each cell carries three things:
 2. the **raw measurement** that produced it, and
 3. the **exact configuration** that produced that measurement.
 
-**There are no column totals.** Adding a speed standing to an OCR standing
+**There is no fixed overall score.** Adding a speed standing to an OCR standing
 gives a number that means nothing. A standing is only meaningful against the
 other cells in the same row.
+
+What replaces a total is a **reader-declared weighting**. On the interactive
+board you rank the dimensions that matter for your workload, and the models
+re-sort by a weighted blend of those priorities, showing each model's standing
+under *your* weighting rather than a house one. This is the honest version of an
+overall score: it exists, but only once someone has said what the model is for.
+Two readers with different jobs correctly get different rankings from the same
+measurements.
 
 Cells that were not measured are marked as not entered, and say why. A gap in
 the schedule and a genuine incapability are recorded differently, because they
