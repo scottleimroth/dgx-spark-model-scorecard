@@ -27,6 +27,14 @@ with its date rather than disappearing.
 
 Full rules in [`../methodology/`](../methodology/).
 
+## Cross-published numbers
+
+Some of these models also appear on the Localmaxxing community leaderboard,
+submitted from the same box with **speculation off**, so those figures are lower
+than the ones here. [`cross-published.md`](cross-published.md) reconciles the
+overlap explicitly and lists three models measured there but absent from this
+board.
+
 ## `raw/`
 
 Sanitised run output backing the tables. Real hostnames, addresses, key
