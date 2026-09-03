@@ -1,0 +1,28 @@
+# Never commit secrets or local fabric
+.env
+.env.*
+!.env.example
+*.key
+*-key
+*.pem
+secrets/
+*credential*
+*.token
+
+# Local model weights and caches (never distributed here)
+models/
+*.safetensors
+*.gguf
+hf-cache/
+
+# Local run output that has not been sanitised
+results/raw/*.private.*
+scratch/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
