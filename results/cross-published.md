@@ -39,6 +39,33 @@ If you want to compare this hardware against other hardware, use the
 Localmaxxing figure. If you want to know what this model does on a Spark when
 served properly, use the board figure.
 
+## The 27B NVFP4 builds, reconciled
+
+Three 27B NVFP4 builds are published in both places. Here the board's own
+**speculative-decoding row** does the reconciling for you, because it records
+the spec-off baseline alongside the gain:
+
+| Model | Board, spec on | Board's spec-off baseline | Localmaxxing (spec off) | Agreement |
+|---|---|---|---|---|
+| RadixArk NVFP4 | 45.0 tok/s (DFlash2 blk8, 3.7x) | 12.2 | **12.37** | within 1.4% |
+| Unsloth NVFP4 | 41.4 tok/s (DFlash2 blk8, 3.8x) | 10.9 | **10.98** | within 0.7% |
+| RadixArk NVFP4, BF16 head | 38.5 tok/s (DFlash2 blk8, 3.9x) | 9.8 | **10.78** | **10% apart** |
+
+The first two are a genuine cross-check: two independent measurement sessions,
+weeks apart, agreeing to about one percent on the same checkpoint and config.
+That is the kind of agreement that makes a number worth quoting.
+
+**The third does not agree, and it is recorded here rather than smoothed over.**
+9.8 against 10.78 is roughly 10%, which is far outside the ~1% the other two
+managed. The two figures come from different sessions, so the candidates are a
+serve-flag difference between them, a warm-versus-cold state difference, or one
+of the two simply being the less careful measurement. It has not been chased
+down yet. Until it is, treat the BF16-head spec-off figure as the least certain
+number in either source.
+
+Publishing the disagreement is the point. A reader who finds it themselves and
+no acknowledgement of it has reason to distrust everything else.
+
 ## Measured for Localmaxxing but not on this board
 
 These were submitted there and have no column here, so the leaderboard is the
